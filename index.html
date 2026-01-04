@@ -1,156 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Grade 1 Demo: Vanilla CSS Scroll</title>
-	<link rel="stylesheet" href="assets/css/base.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dreafolio</title>
+
+  <!-- BOOTSTRAP -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="assets/css/base.css" />
 </head>
+
+
 <body>
-	<!-- Skip link for accessibility -->
-	<a href="#main" class="skip-link">Skip to main content</a>
 
-	<!-- Navigation -->
-	<nav class="nav">
-		<div class="nav-container">
-			<a href="#" class="nav-logo">Portfolio</a>
-			<ul class="nav-links">
-				<li><a href="#hero">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</div>
-	</nav>
+<a href="#main" class="visually-hidden-focusable">Skip to main content</a>
 
-	<main id="main">
-		<!-- Hero Section -->
-		<section id="hero" class="hero">
-			<div class="hero-bg parallax-bg"></div>
-			<div class="hero-content">
-				<h1 class="hero-title animate-on-scroll">Jane Developer</h1>
-				<p class="hero-subtitle animate-on-scroll">Front-End Engineer & UI Designer</p>
-				<a href="#projects" class="btn animate-on-scroll">View My Work</a>
-			</div>
-			<div class="scroll-indicator">
-				<span>Scroll</span>
-				<div class="scroll-arrow"></div>
-			</div>
-		</section>
+<!-- NAVBAR -->
+<nav class="navbar navbar-light fixed-top">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasMenu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
 
-		<!-- About Section -->
-		<section id="about" class="section about">
-			<div class="container">
-				<h2 class="section-title animate-on-scroll">About Me</h2>
-				<div class="about-grid">
-					<div class="about-text animate-on-scroll">
-						<p>
-							I'm a passionate front-end developer with 5 years of experience
-							building responsive, accessible, and performant web applications.
-						</p>
-						<p>
-							My focus is on creating seamless user experiences through clean code
-							and thoughtful design. I believe in the power of vanilla JavaScript
-							and modern CSS to create stunning interfaces without framework bloat.
-						</p>
-					</div>
-					<div class="skills-grid" data-reveal-stagger>
-						<div class="skill-card">
-							<span class="skill-icon">🎨</span>
-							<h3>CSS/Sass</h3>
-							<div class="skill-bar"><div class="skill-fill" style="--fill: 95%"></div></div>
-						</div>
-						<div class="skill-card">
-							<span class="skill-icon">⚡</span>
-							<h3>JavaScript</h3>
-							<div class="skill-bar"><div class="skill-fill" style="--fill: 90%"></div></div>
-						</div>
-						<div class="skill-card">
-							<span class="skill-icon">📱</span>
-							<h3>Responsive</h3>
-							<div class="skill-bar"><div class="skill-fill" style="--fill: 98%"></div></div>
-						</div>
-						<div class="skill-card">
-							<span class="skill-icon">♿</span>
-							<h3>A11y</h3>
-							<div class="skill-bar"><div class="skill-fill" style="--fill: 85%"></div></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+<!-- OFFCANVAS -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+  <div class="offcanvas-body">
+    <ul class="navbar-nav fs-2 text-center">
+      <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">About me</a></li>
+      <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
 
-		<!-- Projects Section -->
-		<section id="projects" class="section projects">
-			<div class="container">
-				<h2 class="section-title animate-on-scroll">Featured Projects</h2>
-				<div class="projects-grid" data-reveal-stagger>
-					<article class="project-card">
-						<div class="project-image">
-							<img src="https://picsum.photos/400/300?random=1" alt="E-commerce Platform" loading="lazy" />
-						</div>
-						<div class="project-content">
-							<h3>E-commerce Platform</h3>
-							<p>A fully responsive online store with cart functionality and payment integration.</p>
-							<div class="project-tags">
-								<span>HTML</span><span>CSS</span><span>JS</span>
-							</div>
-						</div>
-					</article>
-					<article class="project-card">
-						<div class="project-image">
-							<img src="https://picsum.photos/400/300?random=2" alt="Dashboard UI" loading="lazy" />
-						</div>
-						<div class="project-content">
-							<h3>Analytics Dashboard</h3>
-							<p>Real-time data visualization dashboard with dark mode support.</p>
-							<div class="project-tags">
-								<span>CSS Grid</span><span>Charts</span><span>API</span>
-							</div>
-						</div>
-					</article>
-					<article class="project-card">
-						<div class="project-image">
-							<img src="https://picsum.photos/400/300?random=3" alt="Mobile App Landing" loading="lazy" />
-						</div>
-						<div class="project-content">
-							<h3>App Landing Page</h3>
-							<p>Conversion-optimized landing page with scroll animations.</p>
-							<div class="project-tags">
-								<span>Animation</span><span>A/B Test</span><span>SEO</span>
-							</div>
-						</div>
-					</article>
-				</div>
-			</div>
-		</section>
 
-		<!-- Contact Section -->
-		<section id="contact" class="section contact">
-			<div class="container">
-				<h2 class="section-title animate-on-scroll">Get In Touch</h2>
-				<div class="contact-content animate-on-scroll">
-					<p>Interested in working together? Let's talk about your project.</p>
-					<a href="mailto:hello@example.com" class="btn btn-primary">Say Hello</a>
-					<div class="social-links">
-						<a href="#" aria-label="GitHub">GitHub</a>
-						<a href="#" aria-label="LinkedIn">LinkedIn</a>
-						<a href="#" aria-label="Twitter">Twitter</a>
-					</div>
-				</div>
-			</div>
-		</section>
-	</main>
+<div class="star-divider">
+  <svg viewBox="0 0 1200 80" preserveAspectRatio="xMidYMid meet">
 
-	<!-- Footer -->
-	<footer class="footer">
-		<div class="container">
-			<p>&copy; 2025 Jane Developer. Built with vanilla HTML, CSS & JS.</p>
-			<a href="#hero" class="back-to-top" aria-label="Back to top">↑</a>
-		</div>
-	</footer>
+<g class="star f1">
+  <polygon points="200 32 205 42 218 42 208 50 212 62 200 54 188 62 192 50 182 42 195 42"/>
+</g>
 
-	<script src="assets/js/main.js"></script>
-    
+<g class="star f2">
+  <polygon points="350 44 355 54 368 54 358 62 362 74 350 66 338 74 342 62 332 54 345 54"/>
+</g>
+
+<g class="star f3">
+  <polygon points="500 36 505 46 518 46 508 54 512 66 500 58 488 66 492 54 482 46 495 46"/>
+</g>
+
+<g class="star f4">
+  <polygon points="650 48 655 58 668 58 658 66 662 78 650 70 638 78 642 66 632 58 645 58"/>
+</g>
+
+<g class="star f5">
+  <polygon points="800 34 805 44 818 44 808 52 812 64 800 56 788 64 792 52 782 44 795 44"/>
+</g>
+
+<g class="star f6">
+  <polygon points="950 46 955 56 968 56 958 64 962 76 950 68 938 76 942 64 932 56 945 56"/>
+</g>
+
+  </svg>
+</div>
+<main id="main">
+
+  <!-- HERO -->
+<section id="hero" class="hero container-fluid p-0">
+  <picture>
+    <source
+      srcset="https://ik.imagekit.io/ipze59mvl/vertical_home.%20aaff.jpg"
+      media="(orientation: portrait)"
+    />
+    <img
+      src="https://ik.imagekit.io/ipze59mvl/horizontal_home.jpg"
+      alt="Portada Dreafolio"
+      class="img-fluid w-100"
+    />
+  </picture>
+
+  <!-- TEXTO SUPERPUESTO -->
+  <div class="hero-title-overlay">
+    Dreafolio
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+  <div class="container">
+    <h2 class="section-title text-center">About me (≧ω≦)⁭</h2>
+
+    <div class="row align-items-center gy-5">
+      <!-- Imagen grande -->
+      <div class="col-lg-8">
+        <div class="about-image">
+          <img
+            src="https://ik.imagekit.io/ipze59mvl/camara.png"
+            alt="Cámara"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+
+      <!-- Texto sobre papel -->
+      <div class="col-lg-4 d-flex justify-content-center">
+        <div class="about-paper">
+          <img
+            src="https://ik.imagekit.io/ipze59mvl/papelillo.png"
+            alt="Papel"
+            class="paper-bg img-fluid"
+          />
+
+          <p class="about-handwritten">
+            Soy una creativa visual a la
+            que le gusta trabajar 
+            con calma,cuidar los detalles
+            y contar cosas a través de 
+            lo visual.Me interesa crear piezas honestas, sensibles y pensadas
+            con intención.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="container py-5">
+  <h2 class="section-title text-center">Projects⁭</h2>
+
+  <div class="row g-4">
+    <!-- Proyecto 1 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="project-card">
+        <img src="https://ik.imagekit.io/ipze59mvl/cuadro1.png" alt="Proyecto 1">
+        <div class="project-overlay">
+          <span>Proyecto 1</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyecto 2 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="project-card">
+        <img src="https://ik.imagekit.io/ipze59mvl/cuadro%202.png">
+        <div class="project-overlay">
+          <span>Proyecto 2</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proyecto 3 -->
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="project-card">
+        <img src="https://ik.imagekit.io/ipze59mvl/cuadro%203.png" alt="Proyecto 3">
+        <div class="project-overlay">
+          <span>Proyecto 3</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<form id="contactForm" class="contact-form">
+  <h2 class="section-title text-center">Contact⁭</h2>
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Your name"
+    />
+  </div>
+
+  <div class="mb-3">
+    <input
+      type="email"
+      class="form-control"
+      placeholder="Your email"
+    />
+  </div>
+
+  <div class="mb-4">
+    <textarea
+      class="form-control"
+      rows="4"
+      placeholder="Your message"
+    ></textarea>
+  </div>
+
+  <button type="submit" class="btn contact-btn">
+    Send message
+  </button>
+</form>
+
+<footer class="footer-dreafolio py-5">
+  <div class="container text-center">
+
+    <p class="footer-name mb-3">
+      Dreafolio
+    </p>
+
+    <p class="footer-text mb-4">
+      Visual diary · creative portfolio · dreamy ideas
+    </p>
+
+    <div class="footer-links mb-4">
+      <a href="#hero" class="footer-link">Home</a>
+      <span class="footer-separator">·</span>
+      <a href="#about" class="footer-link">About</a>
+      <span class="footer-separator">·</span>
+      <a href="#projects" class="footer-link">Projects</a>
+      <span class="footer-separator">·</span>
+      <a href="#contact" class="footer-link">Contact</a>
+    </div>
+
+    <p class="footer-copy">
+      © 2026 Dreafolio — made with ♡
+    </p>
+  </div>
+</footer>
+
+<div class="ascii-illustration">
+<pre aria-hidden="true">
+⠀⠀⠀⢀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠾⠛⠶⣄⢀⣠⣤⠴⢦⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⡿⠉⠉⠉⠛⠶⠶⠖⠒⠒⣾⠋⠀⢀⣀⣙⣯⡁⠀⠀⠀⣿⠀⠀⠀⠀
+⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⠀⠀⢯⣼⠋⠉⠙⢶⠞⠛⠻⣆⠀⠀⠀
+⠀⠀⠀⢸⣧⠆⠀⠀⠀⠀⠀⠀⠀⠀⠻⣦⣤⡤⢿⡀⠀⢀⣼⣷⠀⠀⣽⠀⠀⠀
+⠀⠀⠀⣼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⢏⡉⠁⣠⡾⣇⠀⠀⠀
+</pre>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
+
+  </svg>
+</div>
