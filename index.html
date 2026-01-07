@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dreafolio</title>
+
+  <meta name="description" content="Portfolio web creativo y personal desarrollado como proyecto final de Web Atelier. Diseño y contenido originales.">
+
+  <link rel="icon" href="assets/favicon.ico">
+
+  <meta property="og:title" content="Dreafolio">
+  <meta property="og:description" content="Portfolio creativo y diario visual personal.">
+  <meta property="og:image" content="https://andreamunozruiz202-afk.github.io/DREAFOLIO/assets/og-image.jpg">
+  <meta property="og:url" content="https://andreamunozruiz202-afk.github.io/DREAFOLIO/">
 
   <!-- BOOTSTRAP -->
   <link
@@ -14,12 +23,10 @@
   <link rel="stylesheet" href="assets/css/base.css" />
 </head>
 
-
 <body>
 
 <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-light fixed-top">
   <div class="container-fluid">
     <button
@@ -27,14 +34,21 @@
       type="button"
       data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasMenu"
+      aria-controls="offcanvasMenu"
+      aria-expanded="false"
+      aria-label="Abrir menú de navegación"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
   </div>
 </nav>
 
-<!-- OFFCANVAS -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvasMenu"
+  aria-labelledby="offcanvasMenuLabel"
+>
   <div class="offcanvas-body">
     <ul class="navbar-nav fs-2 text-center">
       <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
@@ -45,39 +59,24 @@
   </div>
 </div>
 
-
 <div class="star-divider">
-  <svg viewBox="0 0 1200 80" preserveAspectRatio="xMidYMid meet">
-
-<g class="star f1">
-  <polygon points="200 32 205 42 218 42 208 50 212 62 200 54 188 62 192 50 182 42 195 42"/>
-</g>
-
-<g class="star f2">
-  <polygon points="350 44 355 54 368 54 358 62 362 74 350 66 338 74 342 62 332 54 345 54"/>
-</g>
-
-<g class="star f3">
-  <polygon points="500 36 505 46 518 46 508 54 512 66 500 58 488 66 492 54 482 46 495 46"/>
-</g>
-
-<g class="star f4">
-  <polygon points="650 48 655 58 668 58 658 66 662 78 650 70 638 78 642 66 632 58 645 58"/>
-</g>
-
-<g class="star f5">
-  <polygon points="800 34 805 44 818 44 808 52 812 64 800 56 788 64 792 52 782 44 795 44"/>
-</g>
-
-<g class="star f6">
-  <polygon points="950 46 955 56 968 56 958 64 962 76 950 68 938 76 942 64 932 56 945 56"/>
-</g>
-
+  <svg
+    viewBox="0 0 1200 80"
+    preserveAspectRatio="xMidYMid meet"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <g class="star f1"><polygon points="200 32 205 42 218 42 208 50 212 62 200 54 188 62 192 50 182 42 195 42"/></g>
+    <g class="star f2"><polygon points="350 44 355 54 368 54 358 62 362 74 350 66 338 74 342 62 332 54 345 54"/></g>
+    <g class="star f3"><polygon points="500 36 505 46 518 46 508 54 512 66 500 58 488 66 492 54 482 46 495 46"/></g>
+    <g class="star f4"><polygon points="650 48 655 58 668 58 658 66 662 78 650 70 638 78 642 66 632 58 645 58"/></g>
+    <g class="star f5"><polygon points="800 34 805 44 818 44 808 52 812 64 800 56 788 64 792 52 782 44 795 44"/></g>
+    <g class="star f6"><polygon points="950 46 955 56 968 56 958 64 962 76 950 68 938 76 942 64 932 56 945 56"/></g>
   </svg>
 </div>
+
 <main id="main">
 
-  <!-- HERO -->
 <section id="hero" class="hero container-fluid p-0">
   <picture>
     <source
@@ -86,50 +85,48 @@
     />
     <img
       src="https://ik.imagekit.io/ipze59mvl/horizontal_home.jpg"
-      alt="Portada Dreafolio"
+      alt="Imagen principal del portfolio Dreafolio"
       class="img-fluid w-100"
     />
   </picture>
 
-  <!-- TEXTO SUPERPUESTO -->
-  <div class="hero-title-overlay">
-    Dreafolio
-  </div>
+  <div class="hero-title-overlay">Dreafolio</div>
 </section>
 
-<!-- ABOUT -->
+<section class="dreamy-animation">
+    <img 
+      src="https://i.pinimg.com/originals/7c/0b/42/7c0b4272e3b644d54d5ed0149631ed6c.gif"
+      alt="Animación decorativa"
+    >
+  </section>
+
 <section id="about" class="about-section">
   <div class="container">
-    <h2 class="section-title text-center">About me (≧ω≦)⁭</h2>
+    <h2 class="section-title text-center">About me (≧ω≦)</h2>
 
     <div class="row align-items-center gy-5">
-      <!-- Imagen grande -->
       <div class="col-lg-8">
         <div class="about-image">
           <img
             src="https://ik.imagekit.io/ipze59mvl/camara.png"
-            alt="Cámara"
+            alt="Collage de una cámara fotográfica"
             class="img-fluid"
           />
         </div>
       </div>
 
-      <!-- Texto sobre papel -->
       <div class="col-lg-4 d-flex justify-content-center">
         <div class="about-paper">
           <img
             src="https://ik.imagekit.io/ipze59mvl/papelillo.png"
-            alt="Papel"
+            alt="Papel decorativo"
             class="paper-bg img-fluid"
           />
 
           <p class="about-handwritten">
-            Soy una creativa visual a la
-            que le gusta trabajar 
-            con calma,cuidar los detalles
-            y contar cosas a través de 
-            lo visual.Me interesa crear piezas honestas, sensibles y pensadas
-            con intención.
+            Soy una chica creativa a la que le gusta trabajar con calma,
+            cuidar los detalles y contar cosas a través de lo visual.
+            Me interesa crear piezas honestas y pensadas con intención.
           </p>
         </div>
       </div>
@@ -137,92 +134,65 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" class="container py-5">
-  <h2 class="section-title text-center">Projects (*ᴗ͈ˬᴗ͈)ꕤ*.ﾟ⁭</h2>
+  <h2 class="section-title text-center">Projects (*ᴗ͈ˬᴗ͈)ꕤ*.ﾟ</h2>
 
   <div class="row g-4">
-    <!-- Proyecto 1 -->
     <div class="col-12 col-md-6 col-lg-4">
       <div class="project-card">
         <img src="https://ik.imagekit.io/ipze59mvl/cuadro1.png" alt="Proyecto 1">
-        <div class="project-overlay">
-          <span>Proyecto 1</span>
-        </div>
+        <div class="project-overlay"><span>Proyecto 1</span></div>
       </div>
     </div>
 
-    <!-- Proyecto 2 -->
     <div class="col-12 col-md-6 col-lg-4">
       <div class="project-card">
-        <img src="https://ik.imagekit.io/ipze59mvl/cuadro%202.png">
-        <div class="project-overlay">
-          <span>Proyecto 2</span>
-        </div>
+        <img src="https://ik.imagekit.io/ipze59mvl/cuadro%202.png" alt="Proyecto 2">
+        <div class="project-overlay"><span>Proyecto 2</span></div>
       </div>
     </div>
 
-    <!-- Proyecto 3 -->
     <div class="col-12 col-md-6 col-lg-4">
       <div class="project-card">
         <img src="https://ik.imagekit.io/ipze59mvl/cuadro%203.png" alt="Proyecto 3">
-        <div class="project-overlay">
-          <span>Proyecto 3</span>
-        </div>
+        <div class="project-overlay"><span>Proyecto 3</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
- <section class="dreamy-animation">
+<section id="contact" class="contact-section">
+  <form
+    id="contactForm"
+    class="contact-form"
+    action="#"
+    method="post"
+  >
+    <h2 class="section-title text-center">Contact me (≧◡≦) ♡</h2>
+
+    <label for="name" class="visually-hidden">Nombre</label>
+    <input id="name" type="text" class="form-control mb-3" placeholder="Your name" required>
+
+    <label for="email" class="visually-hidden">Email</label>
+    <input id="email" type="email" class="form-control mb-3" placeholder="Your email" required>
+
+    <label for="message" class="visually-hidden">Mensaje</label>
+    <textarea id="message" class="form-control mb-4" rows="4" placeholder="Your message" required></textarea>
+
+    <button type="submit" class="btn contact-btn">Send message</button>
+  </form>
+</section>
+
+<section class="dreamy-animation">
   <img 
-    src="https://i.pinimg.com/originals/7c/0b/42/7c0b4272e3b644d54d5ed0149631ed6c.gif"
-    alt="Dreamy animation"
+    src="https://i.pinimg.com/originals/28/49/c0/2849c0d8dca2bccea74f4eac0ef366d5.gif"
+    alt="Animación decorativa"
   >
 </section>
-<form id="contactForm" class="contact-form">
-  <h2 class="section-title text-center">Contact me (≧◡≦) ♡
-⁭</h2>
-  <div class="mb-3">
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Your name"
-    />
-  </div>
-
-  <div class="mb-3">
-    <input
-      type="email"
-      class="form-control"
-      placeholder="Your email"
-    />
-  </div>
-
-  <div class="mb-4">
-    <textarea
-      class="form-control"
-      rows="4"
-      placeholder="Your message"
-    ></textarea>
-  </div>
-
-  <button type="submit" class="btn contact-btn">
-    Send message
-  </button>
-</form>
-
 <footer class="footer-dreafolio py-5">
   <div class="container text-center">
-
-    <p class="footer-name mb-3">
-      Dreafolio
-    </p>
-
-    <p class="footer-text mb-4">
-      Visual diary · creative portfolio · dreamy ideas
-    </p>
+    <p class="footer-name mb-3">Dreafolio</p>
+    <p class="footer-text mb-4">Visual diary · creative portfolio · dreamy ideas</p>
 
     <div class="footer-links mb-4">
       <a href="#hero" class="footer-link">Home</a>
@@ -234,27 +204,23 @@
       <a href="#contact" class="footer-link">Contact</a>
     </div>
 
-    <p class="footer-copy">
-      © 2026 Dreafolio — made with ♡
-    </p>
+    <p class="footer-copy">© 2026 Dreafolio — made with ♡</p>
   </div>
+
+  <div class="ascii-illustration">
+  <pre>
+⠀⠀⠀⢀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠾⠛⠶⣄⢀⣠⣤⠴⢦⡀⠀⠀⠀⠀
+⠀⠀⠀⢠⡿⠉⠉⠉⠛⠶⠶⠖⠒⠒⣾⠋⠀⢀⣀⣙⣯⡁⠀⠀⠀⣿⠀⠀⠀⠀
+⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⠀⠀⢯⣼⠋⠉⠙⢶⠞⠛⠻⣆⠀⠀⠀
+⠀⠀⠀⢸⣧⠆⠀⠀⠀⠀⠀⠀⠀⠀⠻⣦⣤⡤⢿⡀⠀⢀⣼⣷⠀⠀⣽⠀⠀⠀
+⠀⠀⠀⣼⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⢏⡉⠁⣠⡾⣇⠀
+  </pre>
+</div>
 </footer>
+</main>
 
-
-<!-- DREAMY ANIMATION -->
-<section class="dreamy-animation">
-  <img 
-    src="https://i.pinimg.com/originals/28/49/c0/2849c0d8dca2bccea74f4eac0ef366d5.gif"
-    alt="Dreamy animation"
-  >
-</section>
-
-
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
+
 </body>
 </html>
-
-  </svg>
-</div>
